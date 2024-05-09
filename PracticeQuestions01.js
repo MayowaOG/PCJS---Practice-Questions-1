@@ -7,7 +7,7 @@
 // Question 1 ==================================================================
 const label = "keyincollege";
 const ltd = "ca";
-const domainName = label + ltd;   console.log(domainName);
+const domainName = label + "." + ltd;   console.log(domainName);
 console.log(``);
 
 // Question 2 ==================================================================
@@ -30,8 +30,12 @@ console.log(``)
 
 // Question 5 ==================================================================
 multiNumber = 15
-for(var a = 1; a < 11; a++) {console.log(a * multiNumber)};
+for(var a = 1; a < 11; a++) {console.log(a * multiNumber)
+};
+
+
 console.log(``);
+
 
 // Question 6 ==================================================================
 const integers = [1,2,3,4,5,6,7,8,9,10];
@@ -42,24 +46,25 @@ for(let i = 1; i <= 10; i ++) {
         return num * i
         };
     console.log(integersNew);
+    
 };
 console.log(``);
 
 // Question 7 & 8 ================================================================
 let evenCounter = 0
-// let oddCounter = 0
+let oddCounter = 0
 
 for(var i = 1; i <= 100; i+=1) {
 
     if(i %2 == 0) {console.log(`${i} is an EVEN number`);
         evenCounter += i}
-    else if(i % 2 == 1) {console.log(`${i} is an ODD number`)}    
+    else if(i % 2 == 1) {console.log(`${i} is an ODD number`); oddCounter += i}
+    else if(i = 0) {console.log(`${i} doesn't count.`)}   
     };
     console.log(``);
     console.log(`Sum of even numbers: ${evenCounter}`)
+    console.log(`Sum of odd numbers: ${oddCounter}`)
     console.log(``);
-
-
 
 // Question 9 ==================================================================
 function isPerfect(modulusNumber) {
@@ -85,7 +90,7 @@ function isPerfect(modulusNumber) {
 isPerfect(28);
 console.log(``);
 
-for(let i = 1; i <= 30; i++) {
+for(let i = -10; i <= 30; i++) {
     isPerfect(i);
 };
 
@@ -103,19 +108,26 @@ function isPrime (primusNumber){
         };
     };
 
-    if(sum - primusNumber < 2) {
+    if(primusNumber > 1 && sum - primusNumber < 2) {
         console.log(`**${primusNumber} is a PRIME NUMBER**`)}
-    else {
-        console.log(`${primusNumber} is NOT a prime number`)
-    };
-    return primusNumber
-}
+    else if(primusNumber > 1 && sum - primusNumber > 2) {
+        console.log(`${primusNumber} is NOT a prime number`)}
+    else if(primusNumber < 1) {console.log(`${primusNumber} is...Not to be discussed.`)}
+    else if(primusNumber = 1) {
+    console.log(`${primusNumber} is just the number 1`)};
+    
+    return primusNumber;
+    
+};
+
+    
+
 
 isPrime(47);
 isPrime(48);
 console.log(``);
 
-for(let i = 1; i <= 50; i++) {
+for(let i = -5; i <= 100; i++) {
     isPrime(i);
 };
 
