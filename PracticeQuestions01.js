@@ -78,10 +78,12 @@ function isPerfect(modulusNumber) {
         };
     };
 
-    if(sum - modulusNumber === modulusNumber) {
+    if(modulusNumber !== 0 && sum - modulusNumber === modulusNumber) {
 
         console.log(`******* ${modulusNumber} is a PERFECT NUMBER *******`)
-    } else {console.log(`    ${modulusNumber} is a NOT a perfect number    `)}
+    } else if (modulusNumber !== 0 && sum - modulusNumber !== modulusNumber) {console.log(`    ${modulusNumber} is a NOT a perfect number    `)}
+
+    else {console.log(`    ----- ${modulusNumber} doesn't count -----    `)}
     
     return modulusNumber
 };
@@ -90,7 +92,7 @@ function isPerfect(modulusNumber) {
 isPerfect(28);
 console.log(``);
 
-for(let i = -10; i <= 30; i++) {
+for(let i = -5; i <= 30; i++) {
     isPerfect(i);
 };
 
